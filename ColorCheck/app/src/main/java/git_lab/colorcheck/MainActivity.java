@@ -1,8 +1,10 @@
 package git_lab.colorcheck;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,10 +35,17 @@ public class MainActivity extends AppCompatActivity {
         };
         thread.start();
     }
+    @Override
+    public void onPause(){
+        super.onPause();
+        finish();
+    }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+    public void menu(View view) {
+
+    }
+
+
 }
+
+

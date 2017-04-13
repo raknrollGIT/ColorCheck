@@ -1,4 +1,0 @@
-git add lol.txt
-git commit -am "LOL"
-git push
-nanananna
