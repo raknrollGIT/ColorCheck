@@ -1,5 +1,6 @@
 package git_lab.colorcheck;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -16,9 +17,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+
+        Thread thread= new Thread(){
+            public void run(){
+                try {
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    Intent intent= new Intent(".Menu");
+                    startActivity(intent);
+                }
+            }
+        };
+        thread.start();
     }
 
     /**
