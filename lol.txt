@@ -1,2 +1,4 @@
 git add lol.txt
-git commit -a m "LOL"
+git commit -am "LOL"
+
+nanananna
