@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context="git_lab.colorcheck.Menu">
 
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/startbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="161dp"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/Rankingbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/startbutton"
+            android:layout_below="@+id/startbutton"
+            android:layout_marginTop="30dp"
+            android:text="Ranking" />
+
+        <Button
+            android:id="@+id/TwórcyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Twórcy"
+            android:layout_below="@+id/Rankingbutton"
+            android:layout_alignStart="@+id/Rankingbutton" />
+
+        <Button
+            android:id="@+id/howtobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/TwórcyButton"
+            android:layout_below="@+id/TwórcyButton"
+            android:layout_marginTop="22dp"
+            android:text="How To" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

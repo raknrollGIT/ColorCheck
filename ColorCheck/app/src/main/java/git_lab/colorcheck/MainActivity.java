@@ -45,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public void openBrowser(View view) {
+        Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        startActivity(intent);
+        System.exit(0);
+    }
 }
 
 
