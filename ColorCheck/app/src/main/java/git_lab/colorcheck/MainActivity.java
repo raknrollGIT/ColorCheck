@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent intent= new Intent(".Menu");
+                    Intent intent= new Intent(".jezyki");
                     startActivity(intent);
                 }
             }
