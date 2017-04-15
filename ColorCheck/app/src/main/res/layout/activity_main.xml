@@ -17,13 +17,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:cropToPadding="true"
+            android:onClick="openBrowser"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/tomaszek"
-            android:layout_marginBottom="222dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:onClick="openBrowser"
-            />
+            android:layout_marginTop="69dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/textView"
@@ -32,7 +31,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="99dp"
-            android:text="GIT PRODUKCJE MORDO"
+            android:text="GiT_Lab PRESENT "
             android:textSize="24sp"
             android:textStyle="bold" />
 

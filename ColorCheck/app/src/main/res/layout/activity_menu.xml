@@ -9,8 +9,8 @@
     <RelativeLayout
         android:layout_width="368dp"
         android:layout_height="551dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <Button
             android:id="@+id/startbutton"
@@ -36,11 +36,11 @@
             android:id="@+id/TworcyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
-            android:text="Twórcy"
+            android:layout_alignStart="@+id/Rankingbutton"
             android:layout_below="@+id/Rankingbutton"
+            android:layout_marginTop="23dp"
             android:onClick="openTworcy"
-            android:layout_alignStart="@+id/Rankingbutton" />
+            android:text="Twórcy" />
 
         <Button
             android:id="@+id/howtobutton"
@@ -51,5 +51,19 @@
             android:layout_marginTop="22dp"
             android:onClick="openHowTo"
             android:text="How To" />
+
+        <TextView
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:ems="10"
+            android:textColor="#eb09f7"
+            android:inputType="textPersonName"
+            android:text="         Color Check"
+            android:textSize="75px"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

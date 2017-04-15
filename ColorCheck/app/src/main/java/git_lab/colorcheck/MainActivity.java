@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
     static {
         System.loadLibrary("native-lib");
     }
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Thread thread= new Thread(){
             public void run(){
                 try {
-                    sleep(5000);
+                    sleep(2500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openBrowser(View view) {
-        Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://pusheen.cba.pl/FH/"));
         startActivity(intent);
         System.exit(0);
     }
