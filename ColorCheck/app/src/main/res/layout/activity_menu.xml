@@ -16,54 +16,54 @@
             android:id="@+id/startbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="161dp"
+            android:layout_marginTop="50dp"
             android:onClick="openGame"
-            android:text="Start" />
+            android:text="Play"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/Rankingbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/startbutton"
-            android:layout_below="@+id/startbutton"
-            android:layout_marginTop="30dp"
             android:onClick="openRanking"
-            android:text="Ranking" />
+            android:text="Ranking"
+            android:layout_below="@+id/startbutton"
+            android:layout_alignStart="@+id/startbutton"
+            android:layout_marginTop="27dp" />
 
         <Button
             android:id="@+id/TworcyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/Rankingbutton"
-            android:layout_below="@+id/Rankingbutton"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="31dp"
             android:onClick="openTworcy"
-            android:text="Twórcy" />
+            android:text="Credits"
+            android:layout_below="@+id/Rankingbutton"
+            android:layout_alignStart="@+id/Rankingbutton" />
 
         <Button
             android:id="@+id/howtobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/TworcyButton"
-            android:layout_below="@+id/TworcyButton"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="30dp"
             android:onClick="openHowTo"
-            android:text="How To" />
+            android:text="How To"
+            android:layout_below="@+id/TworcyButton"
+            android:layout_alignStart="@+id/TworcyButton" />
 
         <TextView
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
             android:ems="10"
-            android:textColor="#eb09f7"
             android:inputType="textPersonName"
             android:text="         Color Check"
-            android:textSize="75px"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:textColor="#eb09f7"
+            android:textSize="75px" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

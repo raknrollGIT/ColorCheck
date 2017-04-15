@@ -19,7 +19,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void openGame(View view){
-        Intent intent = new Intent(this, Game.class);
+        Intent intent = new Intent(this, Trudnosc.class);
         startActivity(intent);
     }
 
