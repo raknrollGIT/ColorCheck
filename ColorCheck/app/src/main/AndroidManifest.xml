@@ -30,6 +30,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".Tworcy" />
+        <activity android:name=".Game" />
+        <activity android:name=".Ranking" />
+        <activity android:name=".HowTo"></activity>
     </application>
 
 </manifest>

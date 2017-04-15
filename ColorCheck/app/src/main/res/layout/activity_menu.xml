@@ -19,6 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="161dp"
+            android:onClick="openGame"
             android:text="Start" />
 
         <Button
@@ -28,24 +29,27 @@
             android:layout_alignStart="@+id/startbutton"
             android:layout_below="@+id/startbutton"
             android:layout_marginTop="30dp"
+            android:onClick="openRanking"
             android:text="Ranking" />
 
         <Button
-            android:id="@+id/TwórcyButton"
+            android:id="@+id/TworcyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="23dp"
             android:text="Twórcy"
             android:layout_below="@+id/Rankingbutton"
+            android:onClick="openTworcy"
             android:layout_alignStart="@+id/Rankingbutton" />
 
         <Button
             android:id="@+id/howtobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/TwórcyButton"
-            android:layout_below="@+id/TwórcyButton"
+            android:layout_alignStart="@+id/TworcyButton"
+            android:layout_below="@+id/TworcyButton"
             android:layout_marginTop="22dp"
+            android:onClick="openHowTo"
             android:text="How To" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
