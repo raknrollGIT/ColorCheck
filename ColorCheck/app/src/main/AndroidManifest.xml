@@ -34,7 +34,8 @@
         <activity android:name=".Game" />
         <activity android:name=".Ranking" />
         <activity android:name=".HowTo" />
-        <activity android:name=".Trudnosc"></activity>
+        <activity android:name=".Trudnosc" />
+        <activity android:name=".Global"></activity>
     </application>
 
 </manifest>
