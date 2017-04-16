@@ -59,20 +59,19 @@ public class Game extends AppCompatActivity {
         r3 = los[2];
         r4 = los[3];
         ImageView LG = (ImageView) findViewById(R.id.LG);
-        //imageView.setImageDrawable(getResources().getDrawable(sc));
         LG.setImageResource(colSc[r1]);
-        LG.setTag(colSc[r1]);
+        Global.LGt=colText[r1];
         ImageView PG = (ImageView) findViewById(R.id.PG);
         PG.setImageResource(colSc[r2]);
-        PG.setTag(colSc[r2]);
 
+        Global.PGt=colText[r2];
         ImageView LD = (ImageView) findViewById(R.id.LD);
         LD.setImageResource(colSc[r3]);
-        LD.setTag(colSc[r3]);
+        Global.LDt=colText[r3];
 
         ImageView PD = (ImageView) findViewById(R.id.PD);
         PD.setImageResource(colSc[r4]);
-        PD.setTag(colSc[r4]);
+        Global.PDt=colText[r4];
         TextView ColorName = (TextView) findViewById(R.id.ColorName);
         ColorName.setText(colText[r5]);
         ColorName.setTextColor(colCol[r7]);
@@ -108,17 +107,69 @@ public class Game extends AppCompatActivity {
 
     }
 
-    public void Check(View view){
-        ImageButton b = new ImageButton(this);
-        Global.Score++;
+    public void CheckLG(View view)
+    {
+        if(Global.LGt==colText[r5])
+        {
+           Global.Score++;
+           finish();
+           startActivity(getIntent());
+        }
 
-        finish();
-        startActivity(getIntent());
-        /*if(Spr==r5){
+        else
+        {
+            Intent intent = new Intent(this, gameOver.class);
+            startActivity(intent);
+        }
+
+
+    }
+    public void CheckLD(View view)
+    {
+        if(Global.LDt==colText[r5])
+        {
             Global.Score++;
             finish();
             startActivity(getIntent());
-        }*/
+        }
+
+        else
+        {
+            Intent intent = new Intent(this, gameOver.class);
+            startActivity(intent);
+        }
+    }
+    public void CheckPG(View view)
+    {
+        if(Global.PGt==colText[r5])
+        {
+            Global.Score++;
+            finish();
+            startActivity(getIntent());
+        }
+
+        else
+        {
+            Intent intent = new Intent(this, gameOver.class);
+            startActivity(intent);
+        }
+
+    }
+    public void CheckPD(View view)
+    {
+        if(Global.PDt==colText[r5])
+        {
+            Global.Score++;
+            finish();
+            startActivity(getIntent());
+        }
+
+        else
+        {
+            Intent intent = new Intent(this, gameOver.class);
+            startActivity(intent);
+        }
+
     }
 
 }
