@@ -63,10 +63,12 @@ public class Game extends AppCompatActivity {
         Global.LGt=colText[r1];
         ImageView PG = (ImageView) findViewById(R.id.PG);
         PG.setImageResource(colSc[r2]);
+
         Global.PGt=colText[r2];
         ImageView LD = (ImageView) findViewById(R.id.LD);
         LD.setImageResource(colSc[r3]);
         Global.LDt=colText[r3];
+
         ImageView PD = (ImageView) findViewById(R.id.PD);
         PD.setImageResource(colSc[r4]);
         Global.PDt=colText[r4];
@@ -74,7 +76,9 @@ public class Game extends AppCompatActivity {
         ColorName.setText(colText[r5]);
         ColorName.setTextColor(colCol[r7]);
         TextView Licznik = (TextView) findViewById(R.id.Licznik);
+
         String ll = String.valueOf(Global.Score);
+
         Licznik.setText(ll);
         //Licznik.setText("LIcz");
     }
