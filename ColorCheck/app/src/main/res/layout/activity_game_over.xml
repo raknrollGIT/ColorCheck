@@ -6,45 +6,67 @@
     android:layout_height="match_parent"
     tools:context="git_lab.colorcheck.gameOver">
 
-    <Button
-        android:id="@+id/ranking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ranking"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="217dp"
-        android:onClick="openRanking"/>
+    <RelativeLayout
+        android:layout_width="384dp"
+        android:layout_height="558dp"
+        tools:layout_editor_absoluteY="4dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent">
 
-    <Button
-        android:id="@+id/again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Again"
-        android:textAlignment="textStart"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="299dp"
-        android:onClick="openGame"/>
+        <TextView
+            android:id="@+id/GameOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="12sp"
+            android:text="Game Over"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="655dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
 
-    <Button
-        android:id="@+id/menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="382dp"
-        android:onClick="openmenu"
-        />
+        <Button
+            android:id="@+id/ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openRanking"
+            android:text="Ranking"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="217dp"
+            android:layout_below="@+id/GameOver"
+            android:layout_alignStart="@+id/menu"
+            android:layout_marginTop="57dp" />
 
-    <TextView
-        android:id="@+id/GameOver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="12sp"
-        android:text="Game Over"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="97dp" />
+        <Button
+            android:id="@+id/again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openGame"
+            android:text="Play Again"
+            android:textAlignment="textStart"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="299dp"
+            android:layout_below="@+id/menu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp" />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openmenu"
+            android:text="Menu"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="382dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
