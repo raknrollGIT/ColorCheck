@@ -35,7 +35,8 @@
         <activity android:name=".Ranking" />
         <activity android:name=".HowTo" />
         <activity android:name=".Trudnosc" />
-        <activity android:name=".Global"></activity>
+        <activity android:name=".Global" />
+        <activity android:name=".gameOver"></activity>
     </application>
 
 </manifest>

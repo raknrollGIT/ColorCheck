@@ -28,6 +28,11 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openmenu(View view){
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
+    }
+
     public void openRanking(View view){
         Intent intent = new Intent(this, Ranking.class);
         startActivity(intent);

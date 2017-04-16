@@ -33,7 +33,9 @@
             android:onClick="Check"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="179dp" />
+            tools:layout_editor_absoluteY="179dp"
+
+            />
 
         <ImageButton
             android:id="@+id/PD"
