@@ -30,9 +30,9 @@ public class Game extends AppCompatActivity {
     //String[][] colName = new String[4][2];
     //String[][] colName = {{"red","red.png"},{"green","green.png"},{"blue","blue.png"},{"yellow","yellow.png"}};
     //String[][] colName = {{"red","R.drawable.red"},{"green","R.drawable.green"},{"blue","R.drawable.blue"},{"yellow","R.drawable.yellow"}};
-    String[] colText = {"red","green","blue","yellow"};
-    Integer[] colSc={R.drawable.red,R.drawable.green,R.drawable.blue,R.drawable.yellow};
-    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW};
+    String[] colText = {"red","green","blue","yellow","black","brown","burgundy","grey","olive","orange","pink","purple","salmon","white"};
+    Integer[] colSc={R.drawable.red,R.drawable.green,R.drawable.blue,R.drawable.yellow,R.drawable.black,R.drawable.brown,R.drawable.burgundy,R.drawable.grey,R.drawable.olive,R.drawable.orange,R.drawable.pink,R.drawable.purple,R.drawable.salmon,R.drawable.white};
+    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW,Color.BLACK,Color.parseColor("#964B00"),Color.parseColor("#800000"),Color.GRAY,Color.parseColor("#808000"),Color.parseColor("#FE7F00"),Color.parseColor("#ff9bb2"),Color.parseColor("#b916bf"),Color.parseColor("#FFA07A"),Color.WHITE};
 
 
     //Integer sc=R.drawable.red ;
@@ -43,7 +43,7 @@ public class Game extends AppCompatActivity {
     int r2 = rand.nextInt(3);//liczba kolorów
     int r3 = rand.nextInt(3);
     int r4 = rand.nextInt(3);
-    int r5 = rand.nextInt(3);//liczba kolorów
+    int r5 = rand.nextInt(13);//liczba kolorów
     int r7 = rand.nextInt(3);
     int[] los ={r1,r2,r3,r4};
     int r6= rand.nextInt(3);//liczba pól
