@@ -30,7 +30,7 @@
             android:layout_height="150dp"
             android:layout_alignStart="@+id/LG"
             android:layout_alignTop="@+id/PD"
-            android:onClick="Check"
+            android:onClick="CheckLD"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="179dp" />
@@ -39,13 +39,13 @@
             android:id="@+id/PD"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_alignEnd="@+id/Licznik"
-            android:layout_alignParentBottom="true"
             android:layout_marginBottom="15dp"
-            android:onClick="Check"
+            android:onClick="CheckPD"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="206dp"
-            tools:layout_editor_absoluteY="179dp" />
+            tools:layout_editor_absoluteY="179dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
 
         <ImageButton
             android:id="@+id/LG"
@@ -54,7 +54,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="27dp"
-            android:onClick="Check"
+            android:onClick="CheckLG"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="25dp"
             tools:layout_editor_absoluteY="375dp" />
@@ -65,7 +65,7 @@
             android:layout_height="150dp"
             android:layout_alignStart="@+id/PD"
             android:layout_alignTop="@+id/LG"
-            android:onClick="Check"
+            android:onClick="CheckPG"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="375dp" />

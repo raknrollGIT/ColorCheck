@@ -5,5 +5,9 @@ import android.os.Bundle;
 
 public class Global{
     public static int Score;
+    public static String LGt;
+    public static String LDt;
+    public static String PGt;
+    public static String PDt;
 }
 
