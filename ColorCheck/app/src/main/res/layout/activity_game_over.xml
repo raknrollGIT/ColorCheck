@@ -41,7 +41,9 @@
             tools:layout_editor_absoluteY="217dp"
             android:layout_below="@+id/GameOver"
             android:layout_alignStart="@+id/menu"
-            android:layout_marginTop="57dp" />
+            android:layout_marginTop="57dp"
+
+            />
 
         <Button
             android:id="@+id/again"

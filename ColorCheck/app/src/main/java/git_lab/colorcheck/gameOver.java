@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class gameOver extends AppCompatActivity {
@@ -13,6 +14,21 @@ public class gameOver extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
     }
+
+    public void openmenu(View view){
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
+    }
+    public void openRanking(View view){
+        Intent intent = new Intent(this, Ranking.class);
+        startActivity(intent);
+    }
+    public void openGame(View view){
+        Intent intent = new Intent(this, Trudnosc.class);
+        startActivity(intent);
+    }
+
+
     private Boolean exit = false;
 
     @Override
