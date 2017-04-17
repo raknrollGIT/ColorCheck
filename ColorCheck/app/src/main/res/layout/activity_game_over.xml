@@ -39,11 +39,10 @@
             android:text="Ranking"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="217dp"
-            android:layout_below="@+id/GameOver"
-            android:layout_alignStart="@+id/menu"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="30dp"
 
-            />
+            android:layout_below="@+id/wWynik"
+            android:layout_alignStart="@+id/menu" />
 
         <Button
             android:id="@+id/again"
@@ -66,7 +65,18 @@
             android:text="Menu"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="382dp"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/ranking"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp" />
+
+        <TextView
+            android:id="@+id/wWynik"
+            android:textSize="60px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Your score: 0"
+            android:layout_below="@+id/GameOver"
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>

@@ -58,7 +58,6 @@ public class Game extends AppCompatActivity {
         r2 = los[1];
         r3 = los[2];
         r4 = los[3];
-        //Global.Dz = 1;
 
         ImageView LG = (ImageView) findViewById(R.id.LG);
         LG.setImageResource(colSc[r1]);
@@ -86,40 +85,25 @@ public class Game extends AppCompatActivity {
             r8 = r8+1;
             ColorName.setBackgroundColor(colCol[r8]);
         }
-        /*
+
         TextView Licznik = (TextView) findViewById(R.id.Licznik);
         String ll = String.valueOf(Global.Score);
         Licznik.setText(ll);
 
-        Handler Hang = new Handler();
-        Hang.postDelayed(new Runnable() {
-            public void run() {
-                Go();
-            }
-        }, 3000);
-
-        Thread thread= new Thread(){
+         Global.thread= new Thread(){
             public void run(){
                 try {
                     sleep(Global.Time);
                     Go();
+                    Global.thread.interrupt();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                    Go();
                 }
             }
         };
-        thread.start();
+        Global.thread.start();
 
 
-        Global.timer = new Timer();
-        Global.timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Go();
-            }
-        }, Global.Time);
-*/
     }
 
 
@@ -128,104 +112,104 @@ public class Game extends AppCompatActivity {
 
     private Boolean exit = false;
 
-    @Override
-    public void onBackPressed() {
-        if (exit) {
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            finish();
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Press Back again to Exit.",
-                    Toast.LENGTH_SHORT).show();
-            exit = true;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    exit = false;
-                }
-            }, 3 * 1000);
+        @Override
+        public void onBackPressed() {
+            if (exit) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                finish();
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Press Back again to Exit.",
+                        Toast.LENGTH_SHORT).show();
+                exit = true;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        exit = false;
+                    }
+                }, 3 * 1000);
+
+            }
 
         }
 
-    }
-
-    public void CheckLG(View view)
-    {
-        if(Global.LGt==colText[r5])
+        public void CheckLG(View view)
         {
-            Global.Score++;
-            Global.Time=Global.Time-13;
-            finish();
+            if(Global.LGt==colText[r5])
+            {
+
+                Global.Score++;
+                Global.Time=Global.Time-130;
+                Global.thread.interrupt();
+                startActivity(getIntent());
+            }
+
+            else
+            {
+                Go();
+            }
+
+        }
+        public void CheckLD(View view)
+        {
+            if(Global.LDt==colText[r5])
+            {
+                Global.Score++;
+                Global.Time=Global.Time-130;
+                Global.thread.interrupt();
+                startActivity(getIntent());
+            }
+
+            else
+            {
+                Go();
+            }
+        }
+        public void CheckPG(View view)
+        {
+            if(Global.PGt==colText[r5])
+            {
+                Global.Score++;
+                Global.Time=Global.Time-130;
+                Global.thread.interrupt();
+                startActivity(getIntent());
+            }
+
+            else
+            {
+                Go();
+            }
+
+        }
+        public void CheckPD(View view)
+        {
+            if(Global.PDt==colText[r5])
+            {
+                Global.Score++;
+                Global.Time=Global.Time-130;
+                Global.thread.interrupt();
+                startActivity(getIntent());
+            }
+
+            else
+            {
+                Go();
+            }
+
+        }
+
+        public void Go()
+        {
             startActivity(getIntent());
-        }
-
-        else
-        {
-            Go();
-        }
-
-    }
-    public void CheckLD(View view)
-    {
-        if(Global.LDt==colText[r5])
-        {
-            Global.Score++;
-            Global.Time=Global.Time-13;
-            finish();
-            startActivity(getIntent());
-        }
-
-        else
-        {
-            Go();
-        }
-    }
-    public void CheckPG(View view)
-    {
-        if(Global.PGt==colText[r5])
-        {
-            Global.Score++;
-            Global.Time=Global.Time-13;
-            finish();
-            startActivity(getIntent());
-        }
-
-        else
-        {
-            Go();
-        }
-
-    }
-    public void CheckPD(View view)
-    {
-        if(Global.PDt==colText[r5])
-        {
-            Global.Score++;
-            Global.Time=Global.Time-13;
-            finish();
-            startActivity(getIntent());
-        }
-
-        else
-        {
-            Go();
-        }
-
-    }
-
-    public void Go()
-    {
-        //if(Global.Dz==1){
-            //Global.timer.cancel();
-            //Global.Dz=0;
             Intent intent = new Intent(this, gameOver.class);
+            Global.thread.interrupt();
             startActivity(intent);
-        //}
+
+        }
     }
 
 
 
 
-}

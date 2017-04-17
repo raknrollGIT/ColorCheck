@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class gameOver extends AppCompatActivity {
@@ -13,6 +14,10 @@ public class gameOver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
+        TextView WW = (TextView) findViewById(R.id.wWynik);
+        String lw = String.valueOf(Global.Score);
+        lw="Your score: "+lw;
+        WW.setText(lw);
     }
 
     public void openmenu(View view){
