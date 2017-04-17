@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -27,6 +28,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 
 public class Game extends AppCompatActivity {
@@ -35,16 +37,17 @@ public class Game extends AppCompatActivity {
     //String[][] colName = {{"red","R.drawable.red"},{"green","R.drawable.green"},{"blue","R.drawable.blue"},{"yellow","R.drawable.yellow"}};
     String[] colText = {"red","green","blue","yellow","black","brown","burgundy","grey","olive","orange","pink","purple","salmon","white"};
     Integer[] colSc={R.drawable.red,R.drawable.green,R.drawable.blue,R.drawable.yellow,R.drawable.black,R.drawable.brown,R.drawable.burgundy,R.drawable.grey,R.drawable.olive,R.drawable.orange,R.drawable.pink,R.drawable.purple,R.drawable.salmon,R.drawable.white};
-    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW,Color.BLACK,Color.parseColor("#964B00"),Color.parseColor("#800000"),Color.GRAY,Color.parseColor("#808000"),Color.parseColor("#FE7F00"),Color.parseColor("#ff9bb2"),Color.parseColor("#b916bf"),Color.parseColor("#FFA07A"),Color.WHITE};
+    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW,Color.BLACK,Color.parseColor("#964B00"),Color.parseColor("#800000"),Color.GRAY,Color.parseColor("#808000"),Color.parseColor("#FE7F00"),Color.parseColor("#ff9bb2"),Color.parseColor("#b916bf"),Color.parseColor("#FFA07A"),Color.parseColor("#000000")};
 
     Random rand = new Random();
-    int r1 = rand.nextInt(13); // Gives n such that 0 <= n < 20
-    int r2 = rand.nextInt(13);//liczba kolorów
-    int r3 = rand.nextInt(13);//liczba kolorów
-    int r4 = rand.nextInt(13);//liczba kolorów
-    int r5 = rand.nextInt(13);//liczba kolorów
-    int r7 = rand.nextInt(13);//liczba kolorów
-    int r8 = rand.nextInt(13);//liczba kolorów
+    int r1 = rand.nextInt(14); // Gives n such that 0 <= n < 20
+    int r2 = rand.nextInt(14);//liczba kolorów
+    int r3 = rand.nextInt(14);//liczba kolorów
+    int r4 = rand.nextInt(14);//liczba kolorów
+    int r5 = rand.nextInt(14);//liczba kolorów
+    int r7 = rand.nextInt(14);//liczba kolorów
+    int r8 = rand.nextInt(14);//liczba kolorów
+    int[] colLos={r1,r2,r3,r4};
     int[] los ={r1,r2,r3,r4};
     int r6= rand.nextInt(3);//liczba pól
 
@@ -53,6 +56,31 @@ public class Game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        for(int i=0; i<4;i++)
+        {
+            for(int j=i+1; j<4;j++)
+            {
+                if(colLos[i]==colLos[j])
+                {
+                    colCol[j]=rand.nextInt(14);
+                }
+            }
+
+            for(int z=i-1; z>=0;z--)
+            {
+                if(colLos[i]==colLos[z])
+                {
+                    colCol[z]=rand.nextInt(14);
+                }
+            }
+        }
+
+        r1 = colLos[0];
+        r2 = colLos[1];
+        r3 = colLos[2];
+        r4 = colLos[3];
+
         los[r6]=r5;
         r1 = los[0];
         r2 = los[1];
@@ -77,14 +105,15 @@ public class Game extends AppCompatActivity {
 
         TextView ColorName = (TextView) findViewById(R.id.ColorName);
         ColorName.setText(colText[r5]);
+
+        if (r8==r7)
+        {
+            if(r8<12){r8 = r8+1;}
+            else {r8 = r8-1;}
+        }
+
         ColorName.setTextColor(colCol[r7]);
         ColorName.setBackgroundColor(colCol[r8]);
-
-        while (r8==r7)
-        {
-            r8 = r8+1;
-            ColorName.setBackgroundColor(colCol[r8]);
-        }
 
         TextView Licznik = (TextView) findViewById(R.id.Licznik);
         String ll = String.valueOf(Global.Score);
@@ -103,6 +132,11 @@ public class Game extends AppCompatActivity {
         };
         Global.thread.start();
 
+        Global.T=100;
+
+       Global.Pb= (ProgressBar) findViewById(R.id.progBar);
+
+        upBar();
 
     }
 
@@ -202,10 +236,30 @@ public class Game extends AppCompatActivity {
 
         public void Go()
         {
-            startActivity(getIntent());
-            Intent intent = new Intent(this, gameOver.class);
             Global.thread.interrupt();
+            Intent intent = new Intent(this, gameOver.class);
             startActivity(intent);
+
+        }
+        public void upBar()
+        {
+            Global.threadP= new Thread(){
+                public void run(){
+                    try {
+                        sleep(Global.Time/112);
+                        Global.Pb.setProgress(Global.T);
+                        Global.T=Global.T-1;
+                        Global.threadP.interrupt();
+                        if(Global.T>=0)
+                        {
+                            upBar();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            Global.threadP.start();
 
         }
     }

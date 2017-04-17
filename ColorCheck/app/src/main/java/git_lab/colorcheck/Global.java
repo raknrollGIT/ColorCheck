@@ -2,6 +2,7 @@ package git_lab.colorcheck;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 public class Global{
     public static int Score;
@@ -10,7 +11,10 @@ public class Global{
     public static String PGt;
     public static String PDt;
     public static int Time;
+    public static int T;
     public static Thread thread;
+    public static Thread threadP;
+    public static ProgressBar Pb;
 
 }
 

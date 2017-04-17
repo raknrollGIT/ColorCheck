@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <ProgressBar
-            android:id="@+id/progressBar2"
+            android:id="@+id/progBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="217dp"
             android:layout_height="51dp"
@@ -76,13 +76,13 @@
             android:id="@+id/ColorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/progressBar2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="28dp"
             android:text="ColorName"
             android:textSize="70px"
             tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="97dp" />
+            tools:layout_editor_absoluteY="97dp"
+            android:layout_below="@+id/progBar"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/Licznik"
