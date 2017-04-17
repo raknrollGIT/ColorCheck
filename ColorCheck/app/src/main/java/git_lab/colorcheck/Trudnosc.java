@@ -17,6 +17,7 @@ public class Trudnosc extends AppCompatActivity{
 
     public void openGame(View view){
         Global.Score=0;
+        Global.Time= 2500;
         Intent intent = new Intent(this, Game.class);
         startActivity(intent);
     }
