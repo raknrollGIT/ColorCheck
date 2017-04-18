@@ -138,7 +138,7 @@ public class Game extends AppCompatActivity {
 
         while (r8==r7)
         {
-            r8 = rand.nextInt(14);
+            r8 = rand.nextInt(20);
         }
 
         ColorName.setTextColor(colCol[r7]);
