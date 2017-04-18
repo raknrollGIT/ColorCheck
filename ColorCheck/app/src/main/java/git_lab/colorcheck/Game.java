@@ -1,13 +1,25 @@
 package git_lab.colorcheck;
 
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.renderscript.Sampler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Comparator;
 import java.util.Arrays;
 import java.util.Random;
@@ -24,11 +36,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 import android.app.Application;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 
 public class Game extends AppCompatActivity {
@@ -106,10 +136,9 @@ public class Game extends AppCompatActivity {
         TextView ColorName = (TextView) findViewById(R.id.ColorName);
         ColorName.setText(colText[r5]);
 
-        if (r8==r7)
+        while (r8==r7)
         {
-            if(r8<12){r8 = r8+1;}
-            else {r8 = r8-1;}
+            r8 = rand.nextInt(14);
         }
 
         ColorName.setTextColor(colCol[r7]);
@@ -137,6 +166,9 @@ public class Game extends AppCompatActivity {
        Global.Pb= (ProgressBar) findViewById(R.id.progBar);
 
         upBar();
+
+
+
 
     }
 
@@ -262,6 +294,9 @@ public class Game extends AppCompatActivity {
             Global.threadP.start();
 
         }
+
+
+
     }
 
 

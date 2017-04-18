@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="git_lab.colorcheck">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -36,7 +38,9 @@
         <activity android:name=".HowTo" />
         <activity android:name=".Trudnosc" />
         <activity android:name=".Global" />
-        <activity android:name=".gameOver"></activity>
+        <activity android:name=".gameOver" />
+        <activity android:name=".Baza" />
+        <activity android:name=".BazaV2"></activity>
     </application>
 
 </manifest>
