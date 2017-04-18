@@ -65,18 +65,18 @@ public class Game extends AppCompatActivity {
 
     //String[][] colName = new String[4][2];
     //String[][] colName = {{"red","R.drawable.red"},{"green","R.drawable.green"},{"blue","R.drawable.blue"},{"yellow","R.drawable.yellow"}};
-    String[] colText = {"red","green","blue","yellow","black","brown","burgundy","grey","olive","orange","pink","purple","salmon","white"};
-    Integer[] colSc={R.drawable.red,R.drawable.green,R.drawable.blue,R.drawable.yellow,R.drawable.black,R.drawable.brown,R.drawable.burgundy,R.drawable.grey,R.drawable.olive,R.drawable.orange,R.drawable.pink,R.drawable.purple,R.drawable.salmon,R.drawable.white};
-    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW,Color.BLACK,Color.parseColor("#964B00"),Color.parseColor("#800000"),Color.GRAY,Color.parseColor("#808000"),Color.parseColor("#FE7F00"),Color.parseColor("#ff9bb2"),Color.parseColor("#b916bf"),Color.parseColor("#FFA07A"),Color.parseColor("#000000")};
+    String[] colText = {"red","green","blue","yellow","black","brown","burgundy","grey","olive","orange","pink","purple","salmon","white","akwamaryna","amethyst","chocolate","coral","lavender","navy","lemon"};
+    Integer[] colSc={R.drawable.red,R.drawable.green,R.drawable.blue,R.drawable.yellow,R.drawable.black,R.drawable.brown,R.drawable.burgundy,R.drawable.grey,R.drawable.olive,R.drawable.orange,R.drawable.pink,R.drawable.purple,R.drawable.salmon,R.drawable.white,R.drawable.akwamaryna,R.drawable.amethyst,R.drawable.brown,R.drawable.coral,R.drawable.lavender,R.drawable.navy,R.drawable.chocolate,R.drawable.lemon};
+    Integer[] colCol={Color.RED,Color.GREEN,Color.BLUE,Color.YELLOW,Color.BLACK,Color.parseColor("#964B00"),Color.parseColor("#800000"),Color.GRAY,Color.parseColor("#808000"),Color.parseColor("#FE7F00"),Color.parseColor("#ff9bb2"),Color.parseColor("#b916bf"),Color.parseColor("#FFA07A"),Color.parseColor("#000000"),Color.parseColor("#7FFFD4"),Color.parseColor("#9966CC"),Color.parseColor("#7B3F00"),Color.parseColor("#F88379"),Color.parseColor("#B57EDC"),Color.parseColor("#000080"),Color.parseColor("#CAE00D")};
 
     Random rand = new Random();
-    int r1 = rand.nextInt(14); // Gives n such that 0 <= n < 20
-    int r2 = rand.nextInt(14);//liczba kolorów
-    int r3 = rand.nextInt(14);//liczba kolorów
-    int r4 = rand.nextInt(14);//liczba kolorów
-    int r5 = rand.nextInt(14);//liczba kolorów
-    int r7 = rand.nextInt(14);//liczba kolorów
-    int r8 = rand.nextInt(14);//liczba kolorów
+    int r1 = rand.nextInt(20); // Gives n such that 0 <= n < 20
+    int r2 = rand.nextInt(20);//liczba kolorów
+    int r3 = rand.nextInt(20);//liczba kolorów
+    int r4 = rand.nextInt(20);//liczba kolorów
+    int r5 = rand.nextInt(20);//liczba kolorów
+    int r7 = rand.nextInt(20);//liczba kolorów
+    int r8 = rand.nextInt(20);//liczba kolorów
     int[] colLos={r1,r2,r3,r4};
     int[] los ={r1,r2,r3,r4};
     int r6= rand.nextInt(3);//liczba pól
@@ -93,7 +93,7 @@ public class Game extends AppCompatActivity {
             {
                 if(colLos[i]==colLos[j])
                 {
-                    colCol[j]=rand.nextInt(14);
+                    colCol[j]=rand.nextInt(20);
                 }
             }
 
@@ -101,7 +101,7 @@ public class Game extends AppCompatActivity {
             {
                 if(colLos[i]==colLos[z])
                 {
-                    colCol[z]=rand.nextInt(14);
+                    colCol[z]=rand.nextInt(20);
                 }
             }
         }
