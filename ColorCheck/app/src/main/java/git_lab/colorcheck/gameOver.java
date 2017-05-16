@@ -22,8 +22,8 @@ public class gameOver extends AppCompatActivity {
         TextView zaw = (TextView) findViewById(R.id.wWynik);
 
         BazaV2 db = new BazaV2(this);
-        db.dodajScore("Gracz",Global.Score);
-        Cursor kk = db.dajWszystkie();
+        db.dodajScore(Global.Nick,Global.Score);
+        Cursor kk = db.dajOstatni();
 
         while (kk.moveToNext()){
             int id=kk.getInt(0);

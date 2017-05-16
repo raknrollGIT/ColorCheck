@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="git_lab.colorcheck.Trudnosc">
+
     <RelativeLayout
         android:layout_width="368dp"
         android:layout_height="551dp"
@@ -15,20 +16,40 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="56dp"
             android:text="Difficult"
-            android:textSize="75px"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:textSize="75px" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Normal"
-            android:onClick="openGame"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:onClick="openGame"
+            android:text="Normal" />
+
+        <TextView
+            android:id="@+id/textViewNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:text="Nick:"
+            android:textSize="55px"
+            android:layout_below="@+id/button3"
+            android:layout_toStartOf="@+id/button3" />
+
+        <EditText
+            android:id="@+id/editTextNicki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textViewNick"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
 
     </RelativeLayout>
 

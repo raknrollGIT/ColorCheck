@@ -13,11 +13,13 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
+    BazaV2 gDB; //Baza
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        gDB = new BazaV2(this); //Baza
 
         Thread thread= new Thread(){
             public void run(){

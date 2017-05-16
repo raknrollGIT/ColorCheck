@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="Your score: 0"
+            android:text="Your score: "
             android:layout_below="@+id/GameOver"
             android:layout_centerHorizontal="true" />
 

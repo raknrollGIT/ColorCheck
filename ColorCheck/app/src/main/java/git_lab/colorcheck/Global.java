@@ -10,6 +10,7 @@ public class Global{
     public static String LDt;
     public static String PGt;
     public static String PDt;
+    public static String Nick;
     public static int Time;
     public static int T;
     public static Thread thread;

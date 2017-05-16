@@ -12,6 +12,7 @@ public class BazaV2 extends SQLiteOpenHelper {
 
         public BazaV2(Context context){
             super (context,"Scores.db",null,1);
+            SQLiteDatabase db = this.getWritableDatabase();
         }
 
         @Override
@@ -29,18 +30,35 @@ public class BazaV2 extends SQLiteOpenHelper {
         }
 
         public void dodajScore(String Player, Integer Score){
-            SQLiteDatabase db = getWritableDatabase();
+            SQLiteDatabase db = this.getWritableDatabase();
             ContentValues wartosc = new ContentValues();
             wartosc.put("Player", Player);
             wartosc.put("Score",Score);
-            db.insertOrThrow("Scores",null,wartosc);
+            //db.insertOrThrow("Scores",null,wartosc);
+            db.insert("Scores",null ,wartosc);
         }
 
         public Cursor dajWszystkie(){
-            String[] kolumny={"Id","Plyer","Score"};
             SQLiteDatabase db = getReadableDatabase();
-            Cursor kursor = db.query("Scores",kolumny,null,null,null,null,null);
+            Cursor kursor = db.rawQuery("select * from Scores",null);
             return kursor;
         }
 
+        public Cursor dajOstatni(){
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor kursor = db.rawQuery("select * from Scores where Id = (select MAX(Id)  from Scores)",null);
+            return kursor;
+        }
+
+         public Cursor dajBest(){
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor kursor = db.rawQuery("select * from Scores order by Score desc limit 10",null);
+            return kursor;
+        }
+
+         public void DeleteDB(){
+            SQLiteDatabase db = getWritableDatabase();
+            db.delete("Scores", null, null);
+            db.close();
+        }
 }
