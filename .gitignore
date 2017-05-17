@@ -5,5 +5,7 @@
 /.idea/libraries
 .DS_Store
 /build
+build/
+*.class
 /captures
 .externalNativeBuild
