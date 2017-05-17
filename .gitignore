@@ -9,3 +9,6 @@ build/
 *.class
 /captures
 .externalNativeBuild
+.classpath
+.project
+.metadata
