@@ -29,6 +29,7 @@
             android:textSize="50px"
             android:text=""
             android:layout_marginTop="29dp"
+            android:layout_marginLeft="100px"
             android:layout_below="@+id/textView2"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>

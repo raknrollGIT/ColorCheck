@@ -29,7 +29,7 @@ public class gameOver extends AppCompatActivity {
             int id=kk.getInt(0);
             String Player=kk.getString(1);
             int Score=kk.getInt(2);
-            zaw.setText(zaw.getText()+" "+Player+" "+Score);
+            zaw.setText(zaw.getText()+" "+Score);
         }
     }
 

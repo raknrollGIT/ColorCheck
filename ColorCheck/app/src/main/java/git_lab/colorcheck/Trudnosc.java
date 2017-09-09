@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Trudnosc extends AppCompatActivity{
@@ -21,6 +22,10 @@ public class Trudnosc extends AppCompatActivity{
         Global.Score=0;
         Global.Time= 2500;
         EditText zaw = (EditText) findViewById(R.id.editTextNicki);
+        if (zaw.getText().toString().matches("")) {
+            Toast.makeText(this, "You did not enter a username", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Global.Nick = zaw.getText().toString();
         Intent intent = new Intent(this, Game.class);
         startActivity(intent);
