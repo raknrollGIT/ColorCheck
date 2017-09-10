@@ -87,25 +87,6 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        for(int i=0; i<4;i++)
-        {
-            for(int j=i+1; j<4;j++)
-            {
-                if(colLos[i]==colLos[j])
-                {
-                    colCol[j]=rand.nextInt(20);
-                }
-            }
-
-            for(int z=i-1; z>=0;z--)
-            {
-                if(colLos[i]==colLos[z])
-                {
-                    colCol[z]=rand.nextInt(20);
-                }
-            }
-        }
-
         r1 = colLos[0];
         r2 = colLos[1];
         r3 = colLos[2];
@@ -116,6 +97,15 @@ public class Game extends AppCompatActivity {
         r2 = los[1];
         r3 = los[2];
         r4 = los[3];
+
+        while ( r1 == r2 || r1 == r3 || r1 == r4 || r2 == r3 || r2 == r4 || r3 == r4) {
+            if (r1 == r2) r1 = rand.nextInt(20);
+            if (r1 == r3) r1 = rand.nextInt(20);
+            if (r1 == r4) r1 = rand.nextInt(20);
+            if (r2 == r3) r2 = rand.nextInt(20);
+            if (r2 == r4) r2 = rand.nextInt(20);
+            if (r3 == r4) r3 = rand.nextInt(20);
+        }
 
         ImageView LG = (ImageView) findViewById(R.id.LG);
         LG.setImageResource(colSc[r1]);
@@ -139,7 +129,6 @@ public class Game extends AppCompatActivity {
         while (r8==r7)
         {
             r8 = rand.nextInt(20);
-            r7 = rand.nextInt(20);
         }
 
         ColorName.setTextColor(colCol[r7]);

@@ -49,6 +49,16 @@ public class BazaV2 extends SQLiteOpenHelper {
             Cursor kursor = db.rawQuery("select * from Scores where Id = (select MAX(Id)  from Scores)",null);
             return kursor;
         }
+        public Cursor policzWszystkie(){
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor kursor = db.rawQuery("select Score from Scores",null);
+            return kursor;
+        }
+        public Cursor usunNajslabszy(){
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor kursor = db.rawQuery("delete * from Scores where Score = (select MIN(Score) from Scores)",null);
+            return kursor;
+        }
 
          public Cursor dajBest(){
             SQLiteDatabase db = getReadableDatabase();

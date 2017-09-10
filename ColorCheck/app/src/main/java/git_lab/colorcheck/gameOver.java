@@ -31,6 +31,13 @@ public class gameOver extends AppCompatActivity {
             int Score=kk.getInt(2);
             zaw.setText(zaw.getText()+" "+Score);
         }
+
+        kk=db.policzWszystkie();
+
+        if(kk.getCount()>10)
+        {
+           //db.usunNajslabszy();
+        }
     }
 
     public void openmenu(View view){

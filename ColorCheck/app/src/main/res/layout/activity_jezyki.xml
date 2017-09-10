@@ -20,7 +20,7 @@
             android:onClick="menu"
             android:background="@drawable/plflag"
             android:textColor="#000"
-            android:layout_marginTop="49dp"
+            android:layout_marginTop="61dp"
             android:layout_below="@+id/button2"
             android:layout_alignStart="@+id/button2" />
 
@@ -35,9 +35,19 @@
             android:textColor="#FFF"
             tools:layout_editor_absoluteY="302dp"
             tools:layout_editor_absoluteX="130dp"
-            android:layout_marginTop="174dp"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/button2"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignStart="@+id/button2"
+            android:layout_marginTop="95dp"
+            android:text="Francua" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
