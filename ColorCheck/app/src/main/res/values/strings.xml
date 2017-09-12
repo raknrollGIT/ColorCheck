@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ColorCheck</string>
+    <string name="difficulty_level">Difficulty</string>
+    <string name="game_over">Game Over</string>
+    <string name="language">Language</string>
+    <string name="menu">Menu</string>
+    <string name="start">Start</string>
+    <string name="how_to">How To</string>
+    <string name="ranking">Ranking</string>
+    <string name="play_again">Play Again</string>
+    <string name="your_score">Your Score: </string>
+    <string name="DLnormal">Normal</string>
+    <string name="DLHard">Hard</string>
+    <string name="DLWomen">Women</string>
+    <string name="nick">Nick</string>
+    <string name="Color_Name">ColorName</string>
+    <string name="howto">How To</string>
+    <string name="description">You have to tap the colour which is displayed over the squares. </string>
+    <string name="counter">Counter</string>
+    <string name="play">Play</string>
+    <string name="credits">Credits </string>
+    <string name="difficult">Difficult</string>
+    <string name="Guest">Guest</string>
+    <string name="name">Name</string>
+    <string name="madeby">Made by </string>
+    <string name="country">English</string>
 </resources>

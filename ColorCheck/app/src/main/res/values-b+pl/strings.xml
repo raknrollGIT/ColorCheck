@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ColorCheck</string>
+    <string name="difficulty_level">Poziom Trudności</string>
+    <string name="game_over">Koniec Gry</string>
+    <string name="language">Języki</string>
+    <string name="menu">Menu</string>
+    <string name="start">Start</string>
+    <string name="how_to">Jak grać</string>
+    <string name="ranking">Ranking</string>
+    <string name="play_again">Zagraj Ponownie</string>
+    <string name="your_score">Twój Wynik: </string>
+    <string name="DLnormal">Normaly</string>
+    <string name="DLHard">Trudny</string>
+    <string name="DLWomen">Kobieta</string>
+    <string name="nick">Nick</string>
+    <string name="Color_Name">Nazwa Koloru</string>
+    <string name="howto">Jak grać</string>
+    <string name="description">Naciskaj kwadrat w odpowiednim kolorze, który jest wyświetlany wyżej </string>
+    <string name="counter">Licznik</string>
+    <string name="play">Graj</string>
+    <string name="credits">Twórcy </string>
+    <string name="difficult">Trudność</string>
+    <string name="Guest">Gość</string>
+    <string name="name">Nazwa</string>
+    <string name="madeby">Stworzone przez </string>
+    <string name="country">Polski</string>
+</resources>
