@@ -93,18 +93,25 @@ public class Game extends AppCompatActivity {
         r4 = colLos[3];
 
         los[r6]=r5;
+
         r1 = los[0];
         r2 = los[1];
         r3 = los[2];
         r4 = los[3];
 
-        while ( r1 == r2 || r1 == r3 || r1 == r4 || r2 == r3 || r2 == r4 || r3 == r4) {
+        while ( r1 == r2 || r1 == r3 || r1 == r4 || r2 == r3 || r2 == r4 || r3 == r4)
+        {
             if (r1 == r2) r1 = rand.nextInt(20);
             if (r1 == r3) r1 = rand.nextInt(20);
             if (r1 == r4) r1 = rand.nextInt(20);
             if (r2 == r3) r2 = rand.nextInt(20);
             if (r2 == r4) r2 = rand.nextInt(20);
             if (r3 == r4) r3 = rand.nextInt(20);
+        }
+
+        if(r1!=r5&&r2!=r5&&r3!=r5&&r4!=r5)
+        {
+            r1=r5;
         }
 
         ImageView LG = (ImageView) findViewById(R.id.LG);
@@ -126,12 +133,13 @@ public class Game extends AppCompatActivity {
         TextView ColorName = (TextView) findViewById(R.id.ColorName);
         ColorName.setText(colText[r5]);
 
+        ColorName.setTextColor(colCol[r7]);
+
         while (r8==r7)
         {
             r8 = rand.nextInt(20);
         }
 
-        ColorName.setTextColor(colCol[r7]);
         ColorName.setBackgroundColor(colCol[r8]);
 
         TextView Licznik = (TextView) findViewById(R.id.Licznik);
@@ -149,17 +157,14 @@ public class Game extends AppCompatActivity {
                 }
             }
         };
+       Global.licznik = (int) (long) System.currentTimeMillis(); ///////////
         Global.thread.start();
 
         Global.T=100;
 
-       Global.Pb= (ProgressBar) findViewById(R.id.progBar);
+        Global.Pb= (ProgressBar) findViewById(R.id.progBar);
 
         upBar();
-
-
-
-
     }
 
 
@@ -195,9 +200,17 @@ public class Game extends AppCompatActivity {
         {
             if(Global.LGt==colText[r5])
             {
-
-                Global.Score++;
-                Global.Time=Global.Time-130;
+                Global.licznik=(int) (long)System.currentTimeMillis() - Global.licznik;
+                if(Global.Tryb==0)
+                {
+                    Global.Score++;
+                    Global.Time=Global.licznik+125;
+                }
+                if(Global.Tryb==1)
+                {
+                    Global.Score+=2;
+                    Global.Time=Global.licznik+75;
+                }
                 Global.thread.interrupt();
                 startActivity(getIntent());
             }
@@ -212,8 +225,17 @@ public class Game extends AppCompatActivity {
         {
             if(Global.LDt==colText[r5])
             {
-                Global.Score++;
-                Global.Time=Global.Time-130;
+                Global.licznik=(int) (long)System.currentTimeMillis() - Global.licznik;
+                if(Global.Tryb==0)
+                {
+                    Global.Score++;
+                    Global.Time=Global.licznik+125;
+                }
+                if(Global.Tryb==1)
+                {
+                    Global.Score+=2;
+                    Global.Time=Global.licznik+75;
+                }
                 Global.thread.interrupt();
                 startActivity(getIntent());
             }
@@ -227,8 +249,17 @@ public class Game extends AppCompatActivity {
         {
             if(Global.PGt==colText[r5])
             {
-                Global.Score++;
-                Global.Time=Global.Time-130;
+                Global.licznik=(int) (long)System.currentTimeMillis() - Global.licznik;
+                if(Global.Tryb==0)
+                {
+                    Global.Score++;
+                    Global.Time=Global.licznik+125;
+                }
+                if(Global.Tryb==1)
+                {
+                    Global.Score+=2;
+                    Global.Time=Global.licznik+75;
+                }
                 Global.thread.interrupt();
                 startActivity(getIntent());
             }
@@ -243,8 +274,17 @@ public class Game extends AppCompatActivity {
         {
             if(Global.PDt==colText[r5])
             {
-                Global.Score++;
-                Global.Time=Global.Time-130;
+                Global.licznik=(int) (long)System.currentTimeMillis() - Global.licznik;
+                if(Global.Tryb==0)
+                {
+                    Global.Score++;
+                    Global.Time=Global.licznik+125;
+                }
+                if(Global.Tryb==1)
+                {
+                    Global.Score+=2;
+                    Global.Time=Global.licznik+75;
+                }
                 Global.thread.interrupt();
                 startActivity(getIntent());
             }
@@ -268,7 +308,7 @@ public class Game extends AppCompatActivity {
             Global.threadP= new Thread(){
                 public void run(){
                     try {
-                        sleep(Global.Time/112);
+                        sleep(Global.Time/106); //Dziel
                         Global.Pb.setProgress(Global.T);
                         Global.T=Global.T-1;
                         Global.threadP.interrupt();

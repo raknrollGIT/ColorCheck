@@ -36,7 +36,7 @@ public class gameOver extends AppCompatActivity {
 
         if(kk.getCount()>10)
         {
-           //db.usunNajslabszy();
+           db.usunNajslabszy();
         }
     }
 

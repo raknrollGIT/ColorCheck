@@ -18,9 +18,24 @@ public class Trudnosc extends AppCompatActivity{
         setContentView(R.layout.activity_trudnosc);
     }
 
-    public void openGame(View view){
+    public void openGameNormal(View view){
         Global.Score=0;
-        Global.Time= 2500;
+        Global.Time=1500;
+        Global.Tryb=0;
+        EditText zaw = (EditText) findViewById(R.id.editTextNicki);
+        if (zaw.getText().toString().matches("")) {
+            Toast.makeText(this, "You did not enter a username", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Global.Nick = zaw.getText().toString();
+        Intent intent = new Intent(this, Game.class);
+        startActivity(intent);
+    }
+
+    public void openGameHard(View view){
+        Global.Score=0;
+        Global.Time=1000;
+        Global.Tryb=1;
         EditText zaw = (EditText) findViewById(R.id.editTextNicki);
         if (zaw.getText().toString().matches("")) {
             Toast.makeText(this, "You did not enter a username", Toast.LENGTH_SHORT).show();

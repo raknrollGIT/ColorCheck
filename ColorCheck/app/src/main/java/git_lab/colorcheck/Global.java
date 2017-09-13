@@ -12,6 +12,8 @@ public class Global{
     public static String PDt;
     public static String Nick;
     public static int Time;
+    public static int licznik;
+    public static int Tryb; //0 - Normal 1-Hard 2-Kobieta
     public static int T;
     public static Thread thread;
     public static Thread threadP;
