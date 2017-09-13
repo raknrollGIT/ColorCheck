@@ -27,42 +27,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="openGameNormal"
-            android:text="Normal"
-            android:layout_centerVertical="true"        
-            android:text="@string/DLnormal" />
+            android:text="@string/DLnormal"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/bHard" />
 
         <TextView
             android:id="@+id/textViewNick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="105dp"
-            android:text="@string/name"
-            android:textSize="55px"
             android:layout_below="@+id/button3"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="105dp"
             android:layout_toStartOf="@+id/textView6"
-            android:layout_marginEnd="25dp" />
+            android:text="@string/name"
+            android:textSize="55px" />
 
         <EditText
             android:id="@+id/editTextNicki"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/Guest"
             android:layout_alignBaseline="@+id/textViewNick"
             android:layout_alignBottom="@+id/textViewNick"
+            android:layout_alignStart="@+id/textView6"
+            android:ems="10"
+            android:inputType="textPersonName"
             android:maxLength="16"
-            android:layout_alignStart="@+id/textView6" />
+            android:text="@string/Guest" />
 
         <Button
             android:id="@+id/bHard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/DLHard"
             android:layout_above="@+id/button3"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="36dp"
             android:onClick="openGameHard"
-            android:layout_marginBottom="36dp" />
+            android:text="@string/DLHard" />
 
     </RelativeLayout>
 
