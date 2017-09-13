@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="61dp"
             android:onClick="openGame"
-            android:text="Play"
+            android:text="@string/play"
             android:layout_below="@+id/editText2"
             android:layout_centerHorizontal="true" />
 
@@ -30,7 +30,7 @@
             android:layout_below="@+id/startbutton"
             android:layout_marginTop="27dp"
             android:onClick="openRanking"
-            android:text="Ranking" />
+            android:text="@string/ranking" />
 
         <Button
             android:id="@+id/TworcyButton"
@@ -40,7 +40,7 @@
             android:layout_below="@+id/Rankingbutton"
             android:layout_marginTop="31dp"
             android:onClick="openTworcy"
-            android:text="Credits" />
+            android:text="@string/credits" />
 
         <Button
             android:id="@+id/howtobutton"
@@ -50,7 +50,7 @@
             android:layout_below="@+id/TworcyButton"
             android:layout_marginTop="30dp"
             android:onClick="openHowTo"
-            android:text="How To" />
+            android:text="@string/howto" />
 
         <TextView
             android:id="@+id/editText2"

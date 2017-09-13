@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="56dp"
-            android:text="Difficult"
+            android:text="@string/difficult"
             android:textSize="75px" />
 
         <Button
@@ -28,15 +28,15 @@
             android:layout_height="wrap_content"
             android:onClick="openGameNormal"
             android:text="Normal"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerVertical="true"        
+            android:text="@string/DLnormal" />
 
         <TextView
             android:id="@+id/textViewNick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="105dp"
-            android:text="Nick:"
+            android:text="@string/name"
             android:textSize="55px"
             android:layout_below="@+id/button3"
             android:layout_toStartOf="@+id/textView6"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Guest"
+            android:text="@string/Guest"
             android:layout_alignBaseline="@+id/textViewNick"
             android:layout_alignBottom="@+id/textViewNick"
             android:maxLength="16"
@@ -58,11 +58,11 @@
             android:id="@+id/bHard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/DLHard"
             android:layout_above="@+id/button3"
             android:layout_centerHorizontal="true"
             android:onClick="openGameHard"
-            android:layout_marginBottom="36dp"
-            android:text="Super Duper Hard" />
+            android:layout_marginBottom="36dp" />
 
     </RelativeLayout>
 

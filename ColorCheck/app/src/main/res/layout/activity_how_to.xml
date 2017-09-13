@@ -13,13 +13,13 @@
         tools:layout_editor_absoluteY="8dp">
 
         <TextView
-            android:id="@+id/Tytul"
+            android:id="@+id/howto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="52dp"
-            android:text="HOW TO PLAY"
+            android:text="@string/howto"
             android:textSize="60px"
             tools:layout_editor_absoluteX="95dp"
             tools:layout_editor_absoluteY="48dp" />
@@ -28,11 +28,10 @@
             android:id="@+id/opis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Se wchodzisz w te gre i se naciskasz te kolorki co ci pisze u gury bondz szybki i lepsiejszy od ziomeczkow."
+            android:text="@string/description"
             android:textSize="50px"
-            android:layout_marginTop="76dp"
-            android:layout_marginStart="56dp"
-            android:layout_below="@+id/Tytul"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="98dp"
+            android:layout_below="@+id/howto"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

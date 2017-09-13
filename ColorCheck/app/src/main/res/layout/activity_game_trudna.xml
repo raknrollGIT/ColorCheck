@@ -28,49 +28,49 @@
             android:id="@+id/LD"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_alignStart="@+id/LG"
+            android:layout_alignTop="@+id/PD"
             android:onClick="CheckLD"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="179dp"
 
-            android:layout_alignTop="@+id/PD"
-            android:layout_alignStart="@+id/LG" />
+            />
 
         <ImageButton
             android:id="@+id/PD"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginBottom="13dp"
+            android:layout_marginBottom="15dp"
             android:onClick="CheckPD"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="179dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/PG" />
+            android:layout_alignParentEnd="true" />
 
         <ImageButton
             android:id="@+id/LG"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="19dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="27dp"
             android:onClick="CheckLG"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="375dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+            tools:layout_editor_absoluteY="375dp" />
 
         <ImageButton
             android:id="@+id/PG"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_alignStart="@+id/PD"
+            android:layout_alignTop="@+id/LG"
             android:onClick="CheckPG"
             app:srcCompat="@drawable/white"
             tools:layout_editor_absoluteX="206dp"
-            tools:layout_editor_absoluteY="375dp"
-            android:layout_alignTop="@+id/LG"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="13dp" />
+            tools:layout_editor_absoluteY="375dp" />
 
         <TextView
             android:id="@+id/ColorName"
@@ -90,9 +90,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/counter"
-            android:layout_marginTop="22dp"
             android:layout_alignParentTop="true"
-            android:layout_alignEnd="@+id/PG" />
+            android:layout_marginTop="29dp"
+            android:layout_alignParentEnd="true" />
 
 
     </RelativeLayout>

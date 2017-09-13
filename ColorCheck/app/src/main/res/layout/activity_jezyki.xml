@@ -9,45 +9,23 @@
     <RelativeLayout
         android:layout_width="368dp"
         android:layout_height="551dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Polski"
-            android:onClick="menu"
-            android:background="@drawable/plflag"
-            android:textColor="#000"
-            android:layout_marginTop="61dp"
-            android:layout_below="@+id/button2"
-            android:layout_alignStart="@+id/button2" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="English"
+            android:layout_marginTop="193dp"
+            android:background="@mipmap/country_flag"
             android:onClick="menu"
-            android:background="@drawable/angflag"
+            android:text="@string/country"
             android:textColor="#FFF"
-            tools:layout_editor_absoluteY="302dp"
             tools:layout_editor_absoluteX="130dp"
-            android:layout_below="@+id/button4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="75dp" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/button2"
+            tools:layout_editor_absoluteY="302dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/button2"
-            android:layout_marginTop="95dp"
-            android:text="Francua" />
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
